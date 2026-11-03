@@ -33,7 +33,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon.png">
 
-  <!-- Google Analytics (GA4) / Google Tag Manager (GTM) -->
+  <!-- Google Analytics (GA4) & Google Tag Manager (GTM) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4B2Q48L3F"></script>
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQRHVN9X"></script>
   <script>
     window.GA_MEASUREMENT_ID = 'G-B4B2Q48L3F';
@@ -43,13 +44,7 @@
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    if (window.GA_MEASUREMENT_ID) {
-      const gScript = document.createElement('script');
-      gScript.async = true;
-      gScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
-      document.head.appendChild(gScript);
-      gtag('config', window.GA_MEASUREMENT_ID, { send_page_view: false });
-    }
+    gtag('config', 'G-B4B2Q48L3F');
   </script>
 
   <!-- Google Fonts: Noto Serif JP & Noto Sans JP -->
@@ -696,6 +691,22 @@
       margin-bottom: 32px;
     }
 
+    
+    /* ========================================================
+       Ruby Annotation Typography (商業文庫本仕様の美しいルビ組版)
+       ======================================================== */
+    ruby {
+      ruby-position: over;
+    }
+    rt {
+      font-size: 0.58em;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      font-weight: 500;
+      color: var(--accent-gold) !important;
+      font-family: var(--reader-font);
+      user-select: none;
+    }
     .markdown-section p {
       font-size: var(--reader-font-size);
       line-height: var(--reader-line-height);
